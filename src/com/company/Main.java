@@ -32,6 +32,8 @@ public class Main {
         System.out.println(s1[0] + " - " + s2[0] + ","
                 + s1[1] + " - " + s2[1] + ","
                 + s1[2] + " - " + s2[2]);
-
+        int a123=10;
+        if (a123<15){ System.out.print("express done"); }
+        else {System.out.print("express NOT done");}
     }
 }
