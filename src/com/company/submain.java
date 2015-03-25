@@ -17,6 +17,15 @@ public class submain {
         } else {
             System.out.println("Good bye");
         }
+int t45=10;
+        String str="";
+        while (true) {
+            if (t45 > 15 ){break;}
+            System.out.println( "a is:"  + t45);
+            t45 ++;
+        }
+        System.out.println( "pr is over");
+
 
     }
 }
