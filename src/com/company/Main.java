@@ -36,5 +36,7 @@ public class Main {
         if (a123<15){ System.out.print("express done"); }
         else {System.out.print("express NOT done");}
 
+        cDoor ddd = new cDoor(200);
+        ddd.Close();
     }
 }
