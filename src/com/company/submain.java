@@ -25,6 +25,10 @@ int t45=10;
             t45 ++;
         }
         System.out.println( "pr is over???");
+// lesson 30/03
+for (int j=0; j<5; j=j+1){
+    System.out.println(j);
+}
 
 
     }
