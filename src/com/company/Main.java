@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args1) {
         // write your code here
         //
-        int x = 40;
+        int x = 50;
         int y = 20;
         double d = 23.5;
         d = y / x;
