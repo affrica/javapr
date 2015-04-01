@@ -11,7 +11,7 @@ public class silenium1 {
 
     public static void main(String[] args) {
 
-  System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver_win32\\chromedriver.exe");
+  //System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver.exe");
 
         WebDriver MyD = new ChromeDriver();
         MyD.manage().window().maximize();

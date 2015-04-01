@@ -11,6 +11,6 @@ public class cDoor {
         isOpened = false;
     }
     public void Close() {isOpened=false;
-        System.out.println("Closing door"); }
+        System.out.println("Closing door:\n" ); }
 
 }

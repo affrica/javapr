@@ -17,16 +17,14 @@ public class Main {
 
         System.out.println("Sum of 256 and 3180 " + (256 + 3180));
         boolean b;
-        b = 10 == 10;
-        b = !b;
-        System.out.println(b);
-        b = "1234".equals("1234");
-        System.out.println(b);
+
+        //b = "1234".equals("1234");
+        //System.out.println(b);
         int[] h1 = {10, 0, 0, 21, -5, 38};
         //System.out.print(h1);
         int i2 = h1[4];
         //System.out.print(h1[6] + ", " + h1[1] + ", " + h1[2] + ", " + h1[3] + ", " + h1[4] + ", " + h1[5] );
-        System.out.print(args1[1]);
+        //System.out.print(args1[1]);
         String[] s1 = {"1", "2", "3"};
         String[] s2 = {"a", "b", "c"};
         System.out.println(s1[0] + " - " + s2[0] + ","
@@ -38,5 +36,11 @@ public class Main {
 
         cDoor ddd = new cDoor(200);
         ddd.Close();
+        System.out.println("Start HW:\n");
+
+        //ProDoor bestDoor = new ProDoor(200);
+        ProDoor door = new ProDoor(2000, 900, true, false);
+        String doorInfo = door.toString();
+        System.out.println("Door info:\n" + doorInfo);
     }
 }
