@@ -29,10 +29,13 @@ public class ProDoor {
     public String toString() {
         String res;
         String o, l;
-        if (isOpened == true) {o="yes";}
+        o=(isOpened ? "yes":"no");
+        l=(isLocked ? "yes":"no");
+        /*if (isOpened) {o="yes";}
         else {o="no";}
-        if (isLocked == true) {l="yes";}
+        if (isLocked) {l="yes";}
         else {l="no";}
+        */
         res = "Size: "+Integer.toString(hight)+"x"+Integer.toString(weight) + " mm"+ "\n" +
               "Opened: "+ o + "\n"+
               "Locked: "+ l +"\n";
@@ -43,4 +46,5 @@ public class ProDoor {
         isOpened = false;
         //System.out.println("Closing door:\n");
     }
+    //public doClose1();
 }
