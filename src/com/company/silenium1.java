@@ -11,18 +11,18 @@ public class silenium1 {
 
     public static void main(String[] args) {
 
-  //System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver.exe");
+  System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
 
-        WebDriver MyD = new ChromeDriver();
-        MyD.manage().window().maximize();
-        MyD.get("http://newshub.org");
+        WebDriver drv = new ChromeDriver();
+        drv.manage().window().maximize();
+        drv.get("http://newshub.org");
 
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        MyD.quit();
+        drv.quit();
     }
 
 }
