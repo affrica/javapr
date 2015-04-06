@@ -43,6 +43,7 @@ public class selenium1 {
 
        // for (int i=0; i<as.size(); i++){ System.out.println(as.get(i));}
 
+/*
         int j = 0;
         int els = as.size();
         while (j<els) {
@@ -50,6 +51,8 @@ public class selenium1 {
             System.out.println(as.get(j).getAttribute("href"));
             j++;
         }
+*/
+
 
         search.clear();
         search.sendKeys("webdriver");
