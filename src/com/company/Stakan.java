@@ -15,7 +15,7 @@ public String imia;
 public int procZapolneniia;
 public static String material = "Bumaga";
 public static int vysota = 10;
-
+int hjh;
     public Stakan(String name ) {
         imia = name;
 //        procZapolneniia = 0;
