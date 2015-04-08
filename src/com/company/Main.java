@@ -42,5 +42,16 @@ public class Main {
         ProDoor door = new ProDoor(2000, 900, true, false);
         String doorInfo = door.toString();
         System.out.println("Door info:\n" + doorInfo);
+
+        System.out.println("DOMASHKA 6.04");
+        Stakan ss = new Stakan("Super");
+        Stakan kk = new Stakan("Bigger");
+        System.out.println("s: " + ss.imia);
+        System.out.println("k: " + kk.imia);
+        System.out.println("Stakan: " + Stakan.material);
+        System.out.println("Stakan: " + Stakan.vysota);
+       System.out.println("s: " + ss.procentZapolneniia());
+        ss.nalit(30);
+        System.out.println("s:(30) " + ss.procentZapolneniia());
     }
 }

@@ -17,7 +17,7 @@ public class selenium1 {
 
     public static void main(String[] args) {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
 
         WebDriver MyD = new ChromeDriver();
         MyD.manage().window().maximize();
