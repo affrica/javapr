@@ -90,6 +90,30 @@ public class FirstTest {
         Assert.assertEquals("Fail", false, emptySite(d2));
     }
 
+    @Test // enable Master
+    public void Case10(){
+        setMaster(d2, "753753");
+        setSite(d2, "753@mail.ru");
+        gen(d2);
+        Assert.assertEquals("Fail", true, enableMaster(d2));
+    }
+
+    @Test // enable Site
+    public void Case11(){
+        setMaster(d2, "753753");
+        setSite(d2, "753@mail.ru");
+        gen(d2);
+        Assert.assertEquals("Fail", true, enableSite(d2));
+    }
+
+    @Test // enable Pwd
+    public void Case12(){
+        setMaster(d2, "753753");
+        setSite(d2, "753@mail.ru");
+        gen(d2);
+        Assert.assertEquals("Fail", true, enablePwd(d2));
+    }
+
     public String gen(WebDriver d2) {
         WebElement psite = d2.findElement(By.name("site"));
         psite.sendKeys(Keys.ENTER);
@@ -97,6 +121,23 @@ public class FirstTest {
         return res.getAttribute("value");
     }
 
+    // Enable meth
+    public boolean enableMaster(WebDriver d2){
+        WebElement pmaster = d2.findElement(By.name("master"));
+        return pmaster.isEnabled();
+    }
+
+    public boolean enableSite(WebDriver d2){
+        WebElement pmaster = d2.findElement(By.name("site"));
+        return pmaster.isEnabled();
+    }
+
+    public boolean enablePwd(WebDriver d2){
+        WebElement ppwd = d2.findElement(By.name("password"));
+        return ppwd.isEnabled();
+    }
+
+    //Empty meth
     public boolean emptyMaster(WebDriver d2){
         WebElement pmaster = d2.findElement(By.name("master"));
         return pmaster.getAttribute("value").isEmpty();
@@ -107,6 +148,7 @@ public class FirstTest {
         return pmaster.getAttribute("value").isEmpty();
     }
 
+    //Set meth
     public void setMaster(WebDriver d2, String s1){
         WebElement pmaster = d2.findElement(By.name("master"));
         pmaster.sendKeys(s1);
@@ -125,12 +167,14 @@ public class FirstTest {
 
     @Before
     public void start()
-    {   System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
+    {   System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
         d2 = new ChromeDriver();
         //d2.manage().window().maximize();
         //d2.get("http://angel.net/~nic/passwd.current.html");
         //d2.get("http://oxogamestudio.com/passwd.current2.htm");
-        d2.get("http://oxogamestudio.com/passwd.current3.htm");
+        //d2.get("http://oxogamestudio.com/passwd.current3.htm");
+        d2.get("http://oxogamestudio.com/passwd.current4.htm");
+
     }
 
     @After
