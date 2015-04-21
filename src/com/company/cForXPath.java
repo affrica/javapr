@@ -4,8 +4,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -15,26 +13,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
 /**
- * Created by Admin on 08.04.15.
+ * Created by Admin on 20.04.15.
  */
-@RunWith(JUnit4.class)
-public class FirstTest {
+public class cForXPath {
 
     public WebDriver d2;
-
-//    @Test
-//    public void Case1(){
-//        Assert.fail();
-//    }
-
-//    @Test
-//    public void Case2(){
-//     int a=10;
-//     int b=5;
-//     int expRes = 15;
-//     //   Assert.assertEquals("Expected result didn't matched", expRes, a + b);
-//     Assert.assertTrue(expRes == (a+b));
-//    }
 
     @Test
     public void Case1(){
@@ -115,47 +98,47 @@ public class FirstTest {
     }
 
     public String gen(WebDriver d2) {
-        WebElement psite = d2.findElement(By.name("site"));
+        WebElement psite = d2.findElement(By.xpath("//table//td[text()='Site name']/following::input[1]"));
         psite.sendKeys(Keys.ENTER);
-        WebElement res = d2.findElement(By.name("password"));
+        WebElement res = d2.findElement(By.xpath("//table//td[text()='Generated password']/following::input[1]"));
         return res.getAttribute("value");
     }
 
     // Enable meth
     public boolean enableMaster(WebDriver d2){
-        WebElement pmaster = d2.findElement(By.name("master"));
+        WebElement pmaster = d2.findElement(By.xpath("//table//input[@type='password']"));
         return pmaster.isEnabled();
     }
 
     public boolean enableSite(WebDriver d2){
-        WebElement pmaster = d2.findElement(By.name("site"));
+        WebElement pmaster = d2.findElement(By.xpath("//table//td[text()='Site name']/following::input[1]"));
         return pmaster.isEnabled();
     }
 
     public boolean enablePwd(WebDriver d2){
-        WebElement ppwd = d2.findElement(By.name("password"));
+        WebElement ppwd = d2.findElement(By.xpath("//table//td[text()='Generated password']/following::input[1]"));
         return ppwd.isEnabled();
     }
 
     //Empty meth
     public boolean emptyMaster(WebDriver d2){
-        WebElement pmaster = d2.findElement(By.name("master"));
+        WebElement pmaster = d2.findElement(By.xpath("//table//input[@type='password']"));
         return pmaster.getAttribute("value").isEmpty();
     }
 
     public boolean emptySite(WebDriver d2){
-        WebElement pmaster = d2.findElement(By.name("site"));
+        WebElement pmaster = d2.findElement(By.xpath("//table//td[text()='Site name']/following::input[1]"));
         return pmaster.getAttribute("value").isEmpty();
     }
 
     //Set meth
     public void setMaster(WebDriver d2, String s1){
-        WebElement pmaster = d2.findElement(By.name("master"));
+        WebElement pmaster = d2.findElement(By.xpath("//table//input[@type='password']"));
         pmaster.sendKeys(s1);
     }
 
     public void setSite(WebDriver d2, String s2){
-        WebElement psite = d2.findElement(By.name("site"));
+        WebElement psite = d2.findElement(By.xpath("//table//td[text()='Site name']/following::input[1]"));
         psite.sendKeys(s2);
     }
 
