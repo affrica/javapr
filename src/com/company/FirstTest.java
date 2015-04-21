@@ -173,7 +173,7 @@ public class FirstTest {
         //d2.get("http://angel.net/~nic/passwd.current.html");
         //d2.get("http://oxogamestudio.com/passwd.current2.htm");
         //d2.get("http://oxogamestudio.com/passwd.current3.htm");
-        d2.get("http://oxogamestudio.com/passwd.current4.htm");
+        d2.get("http://oxogamestudio.com/passwd.current6.htm");
 
     }
 
