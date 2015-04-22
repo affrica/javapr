@@ -167,8 +167,8 @@ public class FirstTest {
 
     @Before
     public void start()
-    {   //System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
-        System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");
+    {   System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");
         d2 = new ChromeDriver();
         //d2.manage().window().maximize();
         //d2.get("http://angel.net/~nic/passwd.current.html");

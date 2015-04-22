@@ -27,6 +27,12 @@ public class cForXPath {
         Assert.assertEquals("Fail", expRes, gen(d2));
     }
 
+    @Test // Title Button = Generate
+    public void Case3(){
+        String expRes = "Site name";
+        Assert.assertEquals("Lable = Site name: ", expRes, getSiteLable(d2));
+    }
+
     @Test //200 symbl
     public void Case4(){
         String expRes = "oicbk8Po/8uf+@1a";
@@ -35,7 +41,7 @@ public class cForXPath {
         Assert.assertEquals("200 symbl: ", expRes, gen(d2));
         //Assert.assertTrue(expRes == (a+b));
     }
-    @Test // Button = Generate
+    @Test // Title Button = Generate
     public void Case5(){
         String expRes = "Generate";
         Assert.assertEquals("Button = Generate: ", expRes, getTitle(d2));
@@ -143,21 +149,25 @@ public class cForXPath {
     }
 
     public String getTitle(WebDriver d2) {
-        List<WebElement> inputList = d2.findElements(By.tagName("input"));
-        WebElement res = inputList.get(2);
+        WebElement res = d2.findElement(By.xpath("//input[@type='submit'][1]"));
         return res.getAttribute("value");
+    }
+
+    public String getSiteLable(WebDriver d2) {
+        WebElement res = d2.findElement(By.xpath("//input[@name='site']/.."));
+        return res.getText();
     }
 
     @Before
     public void start()
-    {   //System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
-        System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");
+    {   System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");
         d2 = new ChromeDriver();
         //d2.manage().window().maximize();
         //d2.get("http://angel.net/~nic/passwd.current.html");
         //d2.get("http://oxogamestudio.com/passwd.current2.htm");
         //d2.get("http://oxogamestudio.com/passwd.current3.htm");
-        d2.get("http://oxogamestudio.com/passwd.current6.htm");
+        d2.get("http://oxogamestudio.com/passwd.current5.htm");
 
     }
 
