@@ -34,9 +34,6 @@ public class cForXPath {
     }
 
 //
-
-
-
 //    public String gen(WebDriver d2) {
 //        WebElement psite = d2.findElement(By.xpath("//table//td[text()='Site name']/following::input[1]"));
 //        psite.sendKeys(Keys.ENTER);
@@ -100,8 +97,8 @@ public class cForXPath {
         //d2.manage().window().maximize();
         //d2.get("http://angel.net/~nic/passwd.current.html");
         //d2.get("http://oxogamestudio.com/passwd.current2.htm");
-        //d2.get("http://oxogamestudio.com/passwd.current3.htm");
-        d2.get("http://oxogamestudio.com/passwd.current5.htm");
+        //d2.get("http://oxogamestudio.com/passwd.current5.htm");
+        d2.get("http://oxogamestudio.com/passwd.current2.htm");
 
     }
 

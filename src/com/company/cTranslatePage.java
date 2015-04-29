@@ -18,4 +18,8 @@ public class cTranslatePage {
         WebElement res = d2.findElement(By.xpath("//span[@id='result_box']"));
         return res.getText();
     }
+    public static void InputText(WebDriver d2, String it) {
+        WebElement trslt = d2.findElement(By.xpath("//input[@type='submit']"));
+        trslt.sendKeys(Keys.ENTER);
+    }
 }
