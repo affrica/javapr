@@ -19,7 +19,7 @@ public class cTranslatePage {
         return res.getText();
     }
     public static void InputText(WebDriver d2, String it) {
-        WebElement trslt = d2.findElement(By.xpath("//input[@type='submit']"));
-        trslt.sendKeys(Keys.ENTER);
+        WebElement trslt = d2.findElement(By.xpath("//textarea[@name='text']"));
+        trslt.sendKeys(it);
     }
 }
