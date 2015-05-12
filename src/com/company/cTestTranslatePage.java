@@ -26,14 +26,14 @@ public class cTestTranslatePage {
         Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
     }
 
-    @Test
-    public void RightTranslate(){
-        cTranslatePage.InputText(d2, "tool");
-        cTranslatePage.DoTranslate(d2);
-        String expRes = "инструмент";
-        Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
-    }
-
+//    @Test
+//    public void RightTranslate(){
+//        cTranslatePage.InputText(d2, "tool");
+//        cTranslatePage.DoTranslate(d2);
+//        String expRes = "инструмент";
+//        Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
+//    }
+//
     @Test
     public void AutoRightTranslate(){
        // d2.get("https://translate.google.com/#en/ru");
@@ -59,4 +59,7 @@ public class cTestTranslatePage {
     public void clean()
     {d2.quit();
     }
+
+    //java -classpath ";C:/Automation/selenium-2.44.0/*;C:/Automation/selenium-2.44.0/libs/*;C:/Automation/javapr/out/production/Code;" org.junit.runner.JUnitCore com.company.cTestTranslatePage
+   //javac -classpath ";C:/Automation/selenium-2.44.0/*;C:/Automation/selenium-2.44.0/libs/*;C:/Automation/javapr/out/production/Code;" -encoding utf8 -d "C:/Automation/javapr/out/production/Code" C:/Automation/javapr/src/com/company/*.java
 }

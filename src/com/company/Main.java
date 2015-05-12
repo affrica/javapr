@@ -1,6 +1,6 @@
 package com.company;
 
-import com.sun.glass.ui.SystemClipboard;
+//import com.sun.glass.ui.SystemClipboard;
 
 public class Main {
 
