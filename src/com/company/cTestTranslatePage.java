@@ -59,7 +59,8 @@ public class cTestTranslatePage {
     public void clean()
     {d2.quit();
     }
-
+    //run test
     //java -classpath ";C:/Automation/selenium-2.44.0/*;C:/Automation/selenium-2.44.0/libs/*;C:/Automation/javapr/out/production/Code;" org.junit.runner.JUnitCore com.company.cTestTranslatePage
+   //make build
    //javac -classpath ";C:/Automation/selenium-2.44.0/*;C:/Automation/selenium-2.44.0/libs/*;C:/Automation/javapr/out/production/Code;" -encoding utf8 -d "C:/Automation/javapr/out/production/Code" C:/Automation/javapr/src/com/company/*.java
 }
