@@ -8,6 +8,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -15,10 +17,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
+@RunWith(JUnit4.class)
+
 public class cTestTranslatePage {
 
-    public WebDriver d2;
 
+    public WebDriver d2;
     @Test
     public void EmptyFields(){
         cTranslatePage.DoTranslate(d2);
@@ -54,7 +58,9 @@ public class cTestTranslatePage {
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
         d2 = new ChromeDriver();
+        d2.manage().window().maximize();
         d2.get("https://translate.google.com/#en/ru");
+
     }
 
     @After
