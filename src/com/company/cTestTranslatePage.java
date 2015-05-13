@@ -34,14 +34,14 @@ public class cTestTranslatePage {
 //        Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
 //    }
 //
-    @Test
-    public void AutoRightTranslate(){
-       // d2.get("https://translate.google.com/#en/ru");
-        cTranslatePage.InputText(d2, "country");
-        //cTranslatePage.DoTranslate(d2);
-        String expRes = "страна";
-        Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
-    }
+//    @Test
+//    public void AutoRightTranslate(){
+//       // d2.get("https://translate.google.com/#en/ru");
+//        cTranslatePage.InputText(d2, "country");
+//        //cTranslatePage.DoTranslate(d2);
+//        String expRes = "страна";
+//        Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
+//    }
 
 // //div[contains(@class, 'jfk-button')]
 
@@ -50,7 +50,9 @@ public class cTestTranslatePage {
     @Before
     public void start()
     {   //System.setProperty("webdriver.chrome.driver", "/home/yana/QAFactory/chromedriver");
-        System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:/Automation/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+
         d2 = new ChromeDriver();
         d2.get("https://translate.google.com/#en/ru");
     }
