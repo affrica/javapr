@@ -21,4 +21,13 @@ public class cBron {
         WebElement w = d2.findElement(By.xpath("//button[@name='search']"));
         w.sendKeys(Keys.ENTER);
     }
+    public static void EnterDate(WebDriver d2) {
+        WebElement w = d2.findElement(By.xpath("//table[@class='month']/caption[text()='June 2015']/..//td[text()='27']"));
+        w.sendKeys(Keys.ENTER);
+    }
+    public static String PickResSearch(WebDriver d2) {
+        WebElement w = d2.findElement(By.xpath("//tr[@class='vToolsDataTableRow2']//td[@class='num']/a"));
+        return w.getText();
+
+    }
 }

@@ -24,16 +24,16 @@ public class cTestBron {
     public void ResurveTicket() {
         cBron.EnterFrom(d2, "Kyiv");
         cBron.EnterTo(d2, "Ivano-Frankivsk");
-//        cBron.EnterDate(d2);
+        cBron.EnterDate(d2);
         cBron.DoSearch(d2);
 //        ViewResSearch(d2);
-//        PickResSearch(d2);
+        cBron.PickResSearch(d2);
 //        PlaceIsFree(d2);
 //        TankNumberIs(d2);
 //        PickPlace(d2);
 //        CheckPrice(d2);
-        String expRes = "";
-        Assert.assertEquals("Fail", expRes, cTranslatePage.GetResult(d2));
+        String expRes = "043 К";
+        Assert.assertEquals("Fail", expRes, cBron.PickResSearch(d2));
     }
 
     @Before
